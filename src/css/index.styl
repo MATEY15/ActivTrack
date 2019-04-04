@@ -1,0 +1,380 @@
+@import ("../../libs/template/reset.css")
+@import ("../../libs/template/lib")
+@import ("../../libs/template/media")
+
+@import ("libs/*.css")
+@import ("fonts")
+@import ("blocks/**/**")
+
+body
+	background: url(../img/bg-white.png)
+	overflow-x: hidden
+	min-width 320px
+
+.default-background
+	position relative
+	background linear-gradient(to right,#0c0b0b 0%,#101010 60%)
+	&:before
+		position absolute
+		top 0
+		left 0
+		content ""
+		display block
+		width 100%
+		height 100%
+		background-image url(../img/Noise.png)
+		mix-blend-mode overlay
+		opacity .4
+
+.white-background
+	position relative
+	background linear-gradient(to right,#faf8f8 0,#fbfdfa 60%)
+	&:before
+		position absolute
+		top 0
+		left 0
+		content ""
+		display block
+		width 100%
+		height 100%
+		background-image url(../img/Noise.png)
+		mix-blend-mode overlay
+		opacity 1
+
+
+/* CheckBox */
+
+.label-checked {
+	display: block;
+	margin-bottom: 14px;
+}
+.label-checked input {
+	position relative
+	visibility hidden
+	opacity: 0;
+	width 0
+}
+
+.checkbox__text {
+	position: relative;
+	color: rgba(255,255,255,.4);
+	font-size: 16px;
+	line-height: 18px;
+	padding: 0 0 0 40px;
+	cursor: pointer;
+	display: inline-block;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.checkbox__text:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	margin-top -6px
+	width: 16px;
+	height: 16px;
+	border-radius: 2px;
+	background-color: #19bfbb;
+	transition: all .2s ease;
+	opacity 0;
+}
+
+.checkbox__text:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top -11px
+	width: 22px;
+	height: 22px;
+	border-radius: 3px;
+	border: 2px solid #19bfbb;
+	background-color transparent;
+}
+
+.label-checked input.error ~ .checkbox__text:after {
+	border: 2px solid #0f3e39;
+}
+
+.label-checked input:checked ~ .checkbox__text:before {
+	//background: #535c7e;
+	opacity 1
+}
+
+.label-checked input:checked ~ .checkbox__text:after{
+	
+}
+
+/* CheckBox End */
+
+.mfp-close-btn-in .mfp-close {
+	color: rgba(255,255,255,.5) !important;
+	opacity 1
+}
+
+/* Sprite */
+
+.icon--svg
+	fill #dda665
+.people-group
+	width 63px
+	height 40px
+.work-icon
+	width 56px
+	height 56px
+.document-icon
+	width 45px
+	height 45px
+.student-icon
+	width 48px
+	height 48px
+.restaraun-icon
+	width 53px
+	height 47px
+.person-icon
+	width 46px
+	height 50px
+.smartphone
+	width 56px
+	height 56px
+	left -12px !important
+.discount-icon
+	width 54px
+	height 54px
+.businessman-icon
+	width 60px
+	height 60px
+
+.contact_icon
+	svg
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		fill #19bfbb
+	.telephone-icon
+		width 20px
+		height 20px
+	.mail-icon
+		width 20px
+		height 22px
+	.pin-icon
+		width 20px
+		height 20px
+
+.posonal-info,
+.person-popup
+	position relative
+	display block
+	color rgb(25, 191, 187)
+	font-size 14px
+	text-decoration none
+	padding 0 0 0 40px
+	cursor pointer
+	margin-top -6px
+
+.porsone-information
+	box-sizing border-box
+	position absolute
+	top 0
+	left 0
+	width 100%
+	max-width 460px
+	height 100%
+	font-family: GothamPro;
+	font-size: 1rem;
+	line-height: 1.6rem;
+	color: #dfdfdf;
+	background: #070707
+	padding 30px
+	padding-right 10px
+	z-index 0
+	opacity 0
+	visibility hidden
+	transition all .25s ease-out
+	&.is-active
+		opacity 1
+		visibility visible
+		z-index 2000
+	.closed--porsone-information
+		position absolute
+		display flex
+		width 30px
+		height 34px
+		justify-content center
+		align-items center
+		font-size 22px
+		right 0
+		top 0
+		cursor pointer
+
+.os-theme-dark>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle
+	background: rgba(195, 195, 195, 0.8)
+.porsone-scroll
+	height 100%
+	p
+		padding-right 30px
+
+
+/* Datapicker */
+
+.ui-datepicker
+	padding 0
+	.ui-widget-header
+		background: #070707
+		color #fff
+	td
+		background: #070707
+	a,
+	td
+		padding-right 10px
+		&:hover
+			a
+				color: #fff
+.ui-widget-content
+	background: #070707
+.ui-state-default,
+.ui-widget-content .ui-state-default
+	border none !important
+	background: #070707
+	color #737373
+.ui-corner-all
+	border 0
+	border-bottom 1px solid #737373
+.ui-state-active
+	color #19bfbb !important
+.ui-datepicker-today
+	a
+		color #19bfbb !important
+.ui-corner-all
+	position relative
+	.ui-datepicker-next,
+	.ui-datepicker-prev
+		cursor pointer
+		border-bottom 0
+		tansition all .25s ease-out
+		&:hover
+			&:after
+				border-color #19bfbb
+		&:after
+			width: 8px
+			height: 8px
+			margin-right -4px
+			margin-top -4px
+			position: absolute
+			content: ''
+			border: 2px solid #fff
+			-webkit-transform: rotate(-135deg)
+			transform: rotate(-135deg)
+			right: 50%
+			top: 50%
+			transition: all .3s ease-out
+	.ui-datepicker-next
+		&:after
+			border-width: 0 0 2px 2px
+	.ui-datepicker-prev
+		&:after
+			border-width: 2px 2px 0 0
+.ui-widget-header .ui-state-hover
+	background none !important
+	border transparent
+.ui-datepicker .ui-datepicker-next-hover
+	right 2px !important
+	top 2px !important
+.ui-datepicker .ui-datepicker-prev-hover
+	top 2px !important
+	left 2px !important
+
+/* Datapicker End */
+
+/* Select */
+
+.custom-select
+	position: relative
+	width 100%
+	border-bottom: 1px solid rgba(255,255,255,.2)
+
+.custom-select select
+	display: none
+
+.select-selected
+	font-size: 13px
+	color: #333
+
+.select-selected.select-arrow-active:after
+	transform: rotate(-180deg)
+
+.select-selected:after
+	position: absolute
+	content: ""
+	top: 14px
+	right: 9px
+	width: 8px
+	height: 5px
+	z-index: 2
+	pointer-events: none
+	-webkit-transition: all .25s ease-out
+	-o-transition: all .25s ease-out
+	transition: all .25s ease-out
+
+.select-selected
+	font-size: 1.375rem
+	line-height: 2.875rem
+	padding: 0px 10px 3px 10px
+	color: #fff
+	outline: none
+	cursor: pointer
+
+.select-items
+	opacity: 1
+	font-size: 14px
+	line-height: 24px
+	visibility: visible
+	position: absolute
+	color: #fff
+	background: #070707
+	top: 110%
+	left: 0
+	right: 0
+	z-index: 99
+	max-height 200px
+	overflow-y scroll
+	-webkit-transition: all .1s ease-in-out
+	-o-transition: all .1s ease-in-out
+	transition: all .1s ease-in-out
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
+
+.select-items div
+	padding: 8px 16px
+	cursor: pointer
+
+.select-items div:hover
+	background: #070707
+	color: #fff
+
+.select-hide
+	opacity: 0
+	visibility: hidden
+	top: 140%
+
+.select-items div:hover,
+.same-as-selected
+	background: #070707
+	color: #19bfbb
+
+.wrapper
+	max-width: 960px
+	margin: 80px auto
+
+.wrapper-item
+	width: 180px
+	padding: 0 10px
+	float: left
+
+/* Select End */

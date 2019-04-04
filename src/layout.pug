@@ -1,0 +1,127 @@
+include ../libs/bemto/bemto.pug
+
+doctype html
+html(lang="en")
+	block head
+		head
+			title Fly Coffee
+			meta(http-equiv="content-type", content="text/html; charset=UTF-8")
+			meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+			meta(name='format-detection', content='telephone=no')
+			link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
+			link(rel="stylesheet", href="/css/index.css")
+			meta(name="theme-color", content="#101010")
+			meta(name="msapplication-navbutton-color", content="#101010")
+			meta(name="apple-mobile-web-app-status-bar-style", content="#101010")
+
+	body
+
+		block header
+			+b.HEADER.header_
+				.new-header
+					| Header
+
+		block main
+		
+		block footer
+			+b.FOOTER.footer
+				.section-footer
+					| Footer
+
+		// Modals Form Start
+		.hidden
+			+b.main-form.zoom-anim-dialog#popup-send
+				.porsone-information
+					span.closed--porsone-information
+						| ×
+					.porsone-scroll
+						P
+							| Настоящим подтверждаю, что я ознакомлен и согласен с условиями Политики в отношении обработки персональных данных. Настоящим я даю разрешение ООО «НАЦИОНАЛЬНАЯ ЛИГА БАРМЕНОВ» (далее – «НЛБ») в целях информирования о товарах и услугах «НЛБ», заключения и исполнения договора купли-продажи обрабатывать — собирать, записывать, систематизировать, накапливать, хранить, уточнять (обновлять, изменять), извлекать, использовать, передавать (в том числе поручать обработку другим лицам), обезличивать, блокировать, удалять, уничтожать — мои персональные данные: фамилию, имя, отчество, пол, дату рождения, номера домашнего и мобильного телефонов, адрес электронной почты, город жительства (пребывания), сведения об истории покупок, в том числе наименование приобретаемого товара/услуги и их стоимость, а также данные об интересах на основании данных о поведении в сети Интернет, в сетях телекоммуникационных и интернет-операторов, сетевых и коалиционных программ лояльности. Также я разрешаю «НЛБ» в целях информирования о товарах, работах, услугах и проведения опросов осуществлять обработку вышеперечисленных персональных данных и направлять на указанный мною адрес электронной почты и/или на номер мобильного телефона, а также с помощью системы мгновенного обмена сообщениями через интернет рекламу и информацию о товарах, работах, услугах «НЛБ» и его партнёров. Согласие может быть отозвано мною в любой момент путем направления письменного уведомления по адресу «НЛБ».
+				+e.FORM.__submit.formValidate
+					INPUT(type="hidden" name="project_name" value="FLY COFFEE")
+					INPUT(type="hidden" name="admin_email" value="info@ligabar.ru")
+					INPUT(type="hidden" name="form_subject" value="Popup request")
+					+e.items-input
+						+e.LABEL().label Ваше имя *
+						+e.INPUT(name="name_input").input
+					+e.items-input
+						+e.LABEL().label Ваш телефон *
+						+e.INPUT(name="phone_input").input.phones-mask
+					+e.items-input
+						+e.LABEL().label Ваш E-Mail
+						+e.INPUT(name="email_input" data-required="Email required").input
+					+e.items-input
+						LABEL().label-checked
+							INPUT(type="checkbox" name="check_input" checked data-required="Checkbox required").input-checked
+							P.checkbox__text обработка персональных данных
+						P.posonal-info Читать соглашение *
+					+e.items-button
+						+e.BUTTON._button.button--submit.--cta(type="submit") Отправить
+
+			+b.main-form.zoom-anim-dialog#popup-send-skype
+				.porsone-information
+					span.closed--porsone-information
+						| ×
+					.porsone-scroll
+						P
+							| Настоящим подтверждаю, что я ознакомлен и согласен с условиями Политики в отношении обработки персональных данных. Настоящим я даю разрешение ООО «НАЦИОНАЛЬНАЯ ЛИГА БАРМЕНОВ» (далее – «НЛБ») в целях информирования о товарах и услугах «НЛБ», заключения и исполнения договора купли-продажи обрабатывать — собирать, записывать, систематизировать, накапливать, хранить, уточнять (обновлять, изменять), извлекать, использовать, передавать (в том числе поручать обработку другим лицам), обезличивать, блокировать, удалять, уничтожать — мои персональные данные: фамилию, имя, отчество, пол, дату рождения, номера домашнего и мобильного телефонов, адрес электронной почты, город жительства (пребывания), сведения об истории покупок, в том числе наименование приобретаемого товара/услуги и их стоимость, а также данные об интересах на основании данных о поведении в сети Интернет, в сетях телекоммуникационных и интернет-операторов, сетевых и коалиционных программ лояльности. Также я разрешаю «НЛБ» в целях информирования о товарах, работах, услугах и проведения опросов осуществлять обработку вышеперечисленных персональных данных и направлять на указанный мною адрес электронной почты и/или на номер мобильного телефона, а также с помощью системы мгновенного обмена сообщениями через интернет рекламу и информацию о товарах, работах, услугах «НЛБ» и его партнёров. Согласие может быть отозвано мною в любой момент путем направления письменного уведомления по адресу «НЛБ».
+				+e.FORM.__submit.formValidate
+						INPUT(type="hidden" name="project_name" value="FLY COFFEE")
+						INPUT(type="hidden" name="admin_email" value="info@ligabar.ru")
+						INPUT(type="hidden" name="form_subject" value="Popup request")
+						+e.items-input
+							+e.LABEL().label Ваш Skype *
+							+e.INPUT(name="skype_input").input
+						+e.items-input.wraps-date
+							.items-input--date
+								+e.LABEL().label Время консультации *
+								+e.INPUT(name="date_input" type="date-bumber" placeholder="__.__.____").input.datapicker
+							.items-input--time
+								.custom-select
+									SELECT(name="select_input")
+										//- OPTION(value="0") Выберите время
+										OPTION(value="11:00") 11:00
+										OPTION(value="11:30") 11:30
+										OPTION(value="12:00") 12:00
+										OPTION(value="12:30") 12:30
+										OPTION(value="13:00") 13:00
+										OPTION(value="13:30") 13:30
+										OPTION(value="14:00") 14:00
+										OPTION(value="14:30") 14:30
+										OPTION(value="15:00") 15:00
+										OPTION(value="15:30") 15:30
+										OPTION(value="16:00") 16:00
+										OPTION(value="16:30") 16:30
+										OPTION(value="17:00") 17:00
+										OPTION(value="17:30") 17:30
+										OPTION(value="18:00") 18:00
+										OPTION(value="18:30") 18:30
+										OPTION(value="19:00") 19:00
+										OPTION(value="19:30") 19:30
+										OPTION(value="20:00") 20:00
+										OPTION(value="20:30") 20:30
+										OPTION(value="21:00") 21:00
+						+e.items-input
+							+e.LABEL().label Ваш телефон *
+							+e.INPUT(name="phone_input").input.phones-mask
+						+e.items-input
+							+e.LABEL().label Ваш E-Mail
+							+e.INPUT(name="email_input" data-required="Email required").input
+						+e.items-input
+							LABEL().label-checked
+								INPUT(type="checkbox" name="check_input" checked data-required="Checkbox required").input-checked
+								P.checkbox__text обработка персональных данных
+							P.posonal-info Читать соглашение *
+						+e.items-button
+							+e.BUTTON._button.button--submit.--cta(type="submit") Отправить
+
+			+b.main-form.popup-text.zoom-anim-dialog#popup-info
+				+e.__text
+					+e.P
+						| Настоящим подтверждаю, что я ознакомлен и согласен с условиями Политики в отношении обработки персональных данных. Настоящим я даю разрешение ООО «НАЦИОНАЛЬНАЯ ЛИГА БАРМЕНОВ» (далее – «НЛБ») в целях информирования о товарах и услугах «НЛБ», заключения и исполнения договора купли-продажи обрабатывать — собирать, записывать, систематизировать, накапливать, хранить, уточнять (обновлять, изменять), извлекать, использовать, передавать (в том числе поручать обработку другим лицам), обезличивать, блокировать, удалять, уничтожать — мои персональные данные: фамилию, имя, отчество, пол, дату рождения, номера домашнего и мобильного телефонов, адрес электронной почты, город жительства (пребывания), сведения об истории покупок, в том числе наименование приобретаемого товара/услуги и их стоимость, а также данные об интересах на основании данных о поведении в сети Интернет, в сетях телекоммуникационных и интернет-операторов, сетевых и коалиционных программ лояльности. Также я разрешаю «НЛБ» в целях информирования о товарах, работах, услугах и проведения опросов осуществлять обработку вышеперечисленных персональных данных и направлять на указанный мною адрес электронной почты и/или на номер мобильного телефона, а также с помощью системы мгновенного обмена сообщениями через интернет рекламу и информацию о товарах, работах, услугах «НЛБ» и его партнёров. Согласие может быть отозвано мною в любой момент путем направления письменного уведомления по адресу «НЛБ».
+		// Modals Form end
+
+		block scripts
+			script(src='https://unpkg.com/flipping@latest/dist/flipping.web.js')
+			script(src='/js/shape-overlays.js')
+			script(src='/js/scripts.js')
