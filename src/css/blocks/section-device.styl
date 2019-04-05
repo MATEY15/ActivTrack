@@ -1,0 +1,61 @@
+.device-action
+	color: #000
+	.container
+		@media screen and (max-width: 720px)
+			padding-left 0
+			padding-right 0
+	&__heading
+		position absolute
+		top 50%
+		left 50%
+		font-family: fPoppinsBold
+		font-size 90px
+		c cWhite
+		display block
+		width 100%
+		text-align center
+		transform translate(-50%, -50%)
+		z-index 1
+		@media screen and (max-width: 940px)
+			font-size 80px
+		@media screen and (max-width: 840px)
+			font-size 60px
+		@media screen and (max-width: 600px)
+			font-size 40px
+		@media screen and (max-width: 480px)
+			max-width 260px
+	&__wrapper-main
+		position relative
+	&__wrapper
+		display grid
+		grid-template-columns repeat(3, 1fr)
+		grid-template-rows repeat(2, 274px)
+		@media screen and (max-width: 720px)
+			grid-template-columns repeat(2, 1fr)
+			grid-template-rows repeat(3, 260px)
+		@media screen and (max-width: 480px)
+			grid-template-rows repeat(3, 180px)
+		@media screen and (max-width: 375px)
+			grid-template-rows repeat(3, 135px)
+	&__items
+		position relative
+		color: #000
+		font-size 0
+		overflow hidden
+		img
+			width auto
+			height 100%
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+		&:nth-child(2)
+			grid-row: span 2
+		&:nth-child(3)
+			@media screen and (max-width: 720px)
+				grid-column: 2;
+				grid-row: 1;
+		&:nth-child(4)
+			grid-row 2
+			@media screen and (max-width: 720px)
+				grid-column: 2;

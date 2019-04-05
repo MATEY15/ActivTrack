@@ -48,7 +48,7 @@ var path = {
         sprite: 'scr/css/sprites.postcss'
     },
     watch: {
-        html: 'src/*.pug',
+        html: 'src/**/*.pug',
         js: 'src/js/*.*',
         css: 'src/css/**/*.*',
         img: 'src/img/**/*.*',

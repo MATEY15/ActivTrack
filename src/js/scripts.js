@@ -48,8 +48,9 @@ $("#create-cup-open").on("click", function() {
   }
 });
 
-$("#create-cup-open").on("click", function() {  
-  console.log('hello')
+$(".burger-menu").on("click", function() {  
+  $(".menu-header").toggleClass('is-active');
+  $("body").toggleClass('overflow');
 })
 
 /* Popup Window */

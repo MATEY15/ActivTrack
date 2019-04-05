@@ -4,29 +4,84 @@ doctype html
 html(lang="en")
 	block head
 		head
-			title Fly Coffee
+			title Activtrack
+
 			meta(http-equiv="content-type", content="text/html; charset=UTF-8")
 			meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
 			meta(name='format-detection', content='telephone=no')
-			link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
+			link(rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon")
+			link(rel="shortcut icon" href="img/favicon/apple-touch-icon.png" type="image/x-icon")
+			link(rel="shortcut icon" href="img/favicon/apple-touch-icon-72x72.png" type="image/x-icon")
+			link(rel="shortcut icon" href="img/favicon/apple-touch-icon-144x144.png" type="image/x-icon")
+
 			link(rel="stylesheet", href="/css/index.css")
-			meta(name="theme-color", content="#101010")
-			meta(name="msapplication-navbutton-color", content="#101010")
-			meta(name="apple-mobile-web-app-status-bar-style", content="#101010")
+
+			meta(name="theme-color", content="#3158d3")
+			meta(name="msapplication-navbutton-color", content="#3158d3")
+			meta(name="apple-mobile-web-app-status-bar-style", content="#3158d3")
 
 	body
 
 		block header
-			+b.HEADER.header_
-				.new-header
-					| Header
+			+b.HEADER(style="background: url(img/header-img1-1.jpg)").header_
+				//- DIV(style="background: url(img/header-img1.jpg)").bg-header
+				+b.SECTION.top-line
+					.container
+						.flex-wrapper
+							+b.DIV.logo-top_
+								+e.A(href="#").__link
+									+e.IMG.__img(src="img/logo.png", alt="Logo Activtrack")
+									+e.SPAN.__name Activtrack
+							+b.menu-header
+								+b.NAV.nav-top_
+									+e.UL.__list
+										+e.LI.__list-li
+											a(href="#") Products
+										+e.LI.__list-li
+											a(href="#") Blog
+										+e.LI.__list-li
+											a(href="#") Contact Us
+							.burger-menu
+								span
+								span
+								span
+
+				+b.SECTION.header-content
+					.container
+						.content-center
+							+e.H1.__heading 
+								| Optimize your sit-stand 
+								br
+								| desk Utilization
+							+e.P.__paragraph
+								| Obtain insights, increase sit-stand desk usage and 
+								br
+								| reduce sedentary behavior with a simple to 
+								br
+								| use werable device
+							a(href="#").button
+								| Request quote
 
 		block main
 		
 		block footer
 			+b.FOOTER.footer
-				.section-footer
-					| Footer
+				.container.flex-wrapper
+					.footer-left
+						+b.DIV.logo-foot_
+							+e.A(href="#").__link
+								+e.IMG.__img(src="img/logo-footer.png", alt="Logo Footer Activtrack")
+						+b.NAV.nav-footer_
+							+e.UL.__list
+								+e.LI.__list-li
+									a(href="#") Products
+								+e.LI.__list-li
+									a(href="#") Blog
+								+e.LI.__list-li
+									a(href="#") Contact Us
+					.copyright
+						p
+							| © 2019 ActiveTrack
 
 		// Modals Form Start
 		.hidden

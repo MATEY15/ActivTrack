@@ -1,0 +1,63 @@
+.descript-platform
+	padding-top 70px
+	padding-bottom 40px
+	.platform
+		display flex
+		flex-direction column
+		&-item
+			display flex
+			flex-direction row
+			align-items center
+			justify-content space-between
+			margin-top 50px
+			margin-bottom 50px
+			@media screen and (max-width: 640px)
+				flex-direction column
+				&:nth-child(even)
+					.platform-item__img
+						order 2
+					.platform-item__text
+						order 1
+			@media screen and (max-width: 414px)
+				margin-top 16px
+				margin-bottom 16px
+			.left-img
+				margin-left -50px
+				@media screen and (max-width: 1220px)
+					margin-left 0
+			&__img
+				@media screen and (max-width: 1024px)
+					width 50%
+					text-align center
+				@media screen and (max-width: 640px)
+					width 100%
+				img
+					@media screen and (max-width: 1024px)
+						width 90%
+						height: auto
+					@media screen and (max-width: 640px)
+						width auto
+						max-width 100%
+			&__text
+				max-width 480px
+				@media screen and (max-width: 1024px)
+					width 50%
+				@media screen and (max-width: 640px)
+					width 100%
+					margin-bottom 65px
+				h4
+					font-size 32px
+					line-height 40px
+					font-family: fPoppinsSemiBold
+					c cBlack
+					margin-bottom 27px
+					@media screen and (max-width: 640px)
+						font-size 28px
+				p
+					font-size 18px
+					line-height 30px
+					color: #78727a
+					font-family: fPoppinsMedium
+					@media screen and (max-width: 640px)
+						font-size 16px
+				
