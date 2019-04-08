@@ -1,0 +1,90 @@
+extends layout.pug
+
+block prepend header-blog
+	- var selected = 'blog'
+	include include/header-blog
+
+block prepend main
+	svg.shape-overlays.is-opened(viewbox='0 0 100 100', preserveaspectratio='none')
+		path.shape-overlays__path
+		path.shape-overlays__path
+		path.shape-overlays__path
+
+	+b.MAIN.section_main
+		.blog-wrapper
+			.content-blog
+				.date-blog
+					a(href="#") News, 
+					span March 28, 2019
+				h1.heading-h2
+					| I have hinted that I would often jerk poor Queequeg from be.
+				h1 h1 Heading text
+				h2 h2 Heading text
+				h3 h3 Heading text
+				h4 h4 Heading text
+				h5 h5 Heading text
+				h6 h6 Heading text
+				ul
+					li
+						| Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+					li
+						| Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+					li
+						| Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+					li
+						| Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+				a(href="#")
+					| Link Text
+				p
+					| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				h4
+					| Lorem Ipsum is simply dummy text 
+				p
+					| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				p
+					| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+				img(src="/img/post-img1.jpg", alt="")
+				h4
+					| Lorem Ipsum is simply dummy text
+				p
+					| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				h4
+					| Lorem Ipsum is simply dummy text
+				p
+					| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				img(src="/img/post-img2.jpg", alt="", class="align-right")
+				h4
+					| Lorem Ipsum is simply dummy text
+				p
+					| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				h4
+					| Lorem Ipsum is simply dummy text
+				p
+					| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				img(src="/img/post-img2.jpg", alt="", class="align-left")
+				h4
+					| Lorem Ipsum is simply dummy text
+				p
+					| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				img(src="/img/post-img3.jpg", alt="")
+			+b.post-foot_
+				+e.__author
+					h4
+						| Author
+					+e.__author-item
+						.author-img
+							img(src="/img/post-author.jpg", alt="")
+						.author-name
+							p Tua Manuera
+							span Super bloger
+				+e.__share
+					h4
+						| Share us online
+					+e.__share-item
+						ul.social-link
+							li
+								a(href="#")
+									img(src="/img/facebook.svg", alt="")
+							li
+								a(href="#")
+									img(src="/img/twitter.svg", alt="")

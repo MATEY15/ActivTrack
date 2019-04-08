@@ -121,7 +121,7 @@ gulp.task('pug', function() {
     gulp.src(path.src.html)
         .pipe(plumber())
         .pipe(pug({
-            pretty: false,
+            pretty: true,
             locals: { "BEM": require('bem-pug-mixins').default }
         }))
         .pipe(gulp.dest(path.build.html))

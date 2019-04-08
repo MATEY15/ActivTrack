@@ -1,0 +1,151 @@
+.blog-wrapper
+	border-bottom 1px solid #fafafa
+.content-blog
+	max-width 880px
+	padding-left 10px
+	padding-right 10px
+	margin 0 auto
+	@media screen and (max-width: 640px)
+		padding-left 20px
+		padding-right 20px
+	*:last-child
+		margin-bottom 0
+	.date-blog
+		margin-top 44px
+		margin-bottom 17px
+		text-align center
+		a, span
+			font-size 16px
+		span
+			color: #868686
+	p
+		font-size 18px
+		line-height 30px
+		font-family: fPoppinsMedium
+		color: #78727a
+		margin-bottom 50px
+	a
+		font-size 16px
+		line-height 30px
+		font-family: fPoppinsMedium
+		color: #436ae4
+		text-decoration none
+	ul
+		margin-top 30px
+		margin-bottom 30px
+		li
+			position relative
+			font-size 17px
+			line-height 28px
+			font-family: fPoppinsMedium
+			color: #78727a
+			padding-left 20px
+			&:before
+				position absolute
+				top 12px
+				left 0
+				display block
+				content ''
+				width 6px
+				height 6px
+				background: #436ae4
+				border-radius 50%
+			
+	img
+		max-width 100%
+		margin-bottom 40px
+	h1
+		margin-bottom 27px
+		color cBlack
+	h2
+		margin-bottom 32px
+		color cBlack
+	h3
+		margin-bottom 30px
+		color cBlack
+	h4
+		margin-bottom 28px
+		color cBlack
+	h5
+		margin-bottom 24px
+		color cBlack
+	h6
+		margin-bottom 22px
+		color cBlack
+	.align-right
+		float right
+		margin-left 100px
+		@media screen and (max-width: 854px)
+			margin-left 40px
+		@media screen and (max-width: 600px)
+			float none
+			display block
+			margin-left auto
+			margin-right auto
+	.align-left
+		float left
+		margin-right 100px
+		@media screen and (max-width: 854px)
+			margin-right 40px
+		@media screen and (max-width: 600px)
+			float none
+			display block
+			margin-left auto
+			margin-right auto
+
+.post-foot
+	width 100%
+	max-width 880px
+	padding-left 10px
+	padding-right 10px
+	margin 50px auto 80px
+	display flex
+	flex-direction row
+	@media screen and (max-width: 640px)
+		padding-left 20px
+		padding-right 20px
+	@media screen and (max-width: 480px)
+		flex-direction column
+	&__author
+		margin-right 160px
+		@media screen and (max-width: 600px)
+			margin-right 50px
+		@media screen and (max-width: 480px)
+			margin-right 0
+			margin-bottom 30px
+	h4
+		font-family: fPoppinsBold
+		font-size 18px
+		color #78727a
+		margin-bottom 33px
+	&__author-item
+		display flex
+		flex-direction row
+		align-items center
+		.author-img
+			position relative
+			width 75px
+			height 75px
+			border-radius 50%
+			overflow hidden
+			margin-right 12px
+			img
+				position absolute
+				top 50%
+				left 50%
+				transform translate(-50%, -50%)
+		.author-name
+			font-size 16px
+			font-family: fPoppinsMedium
+			color #78727a
+			p
+				margin-bottom 11px
+			span
+				color rgba(120, 114, 122, 0.5)
+				
+		
+	&__share-item
+		.social-link
+			li
+				display inline-block
+				margin-right 16px

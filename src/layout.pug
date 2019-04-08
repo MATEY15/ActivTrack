@@ -21,160 +21,37 @@ html(lang="en")
 			meta(name="apple-mobile-web-app-status-bar-style", content="#3158d3")
 
 	body
+		div#overlayer
+		block header-one
 
-		block header
-			+b.HEADER(style="background: url(img/header-img1-1.jpg)").header_
-				//- DIV(style="background: url(img/header-img1.jpg)").bg-header
-				+b.SECTION.top-line
-					.container
-						.flex-wrapper
-							+b.DIV.logo-top_
-								+e.A(href="#").__link
-									+e.IMG.__img(src="img/logo.png", alt="Logo Activtrack")
-									+e.SPAN.__name Activtrack
-							+b.menu-header
-								+b.NAV.nav-top_
-									+e.UL.__list
-										+e.LI.__list-li
-											a(href="#") Products
-										+e.LI.__list-li
-											a(href="#") Blog
-										+e.LI.__list-li
-											a(href="#") Contact Us
-							.burger-menu
-								span
-								span
-								span
+		block header-two
 
-				+b.SECTION.header-content
-					.container
-						.content-center
-							+e.H1.__heading 
-								| Optimize your sit-stand 
-								br
-								| desk Utilization
-							+e.P.__paragraph
-								| Obtain insights, increase sit-stand desk usage and 
-								br
-								| reduce sedentary behavior with a simple to 
-								br
-								| use werable device
-							a(href="#").button
-								| Request quote
+		block header-blog
 
 		block main
 		
 		block footer
-			+b.FOOTER.footer
-				.container.flex-wrapper
-					.footer-left
-						+b.DIV.logo-foot_
-							+e.A(href="#").__link
-								+e.IMG.__img(src="img/logo-footer.png", alt="Logo Footer Activtrack")
-						+b.NAV.nav-footer_
-							+e.UL.__list
-								+e.LI.__list-li
-									a(href="#") Products
-								+e.LI.__list-li
-									a(href="#") Blog
-								+e.LI.__list-li
-									a(href="#") Contact Us
-					.copyright
-						p
-							| © 2019 ActiveTrack
+			include include/footer
 
-		// Modals Form Start
 		.hidden
 			+b.main-form.zoom-anim-dialog#popup-send
-				.porsone-information
-					span.closed--porsone-information
-						| ×
-					.porsone-scroll
-						P
-							| Настоящим подтверждаю, что я ознакомлен и согласен с условиями Политики в отношении обработки персональных данных. Настоящим я даю разрешение ООО «НАЦИОНАЛЬНАЯ ЛИГА БАРМЕНОВ» (далее – «НЛБ») в целях информирования о товарах и услугах «НЛБ», заключения и исполнения договора купли-продажи обрабатывать — собирать, записывать, систематизировать, накапливать, хранить, уточнять (обновлять, изменять), извлекать, использовать, передавать (в том числе поручать обработку другим лицам), обезличивать, блокировать, удалять, уничтожать — мои персональные данные: фамилию, имя, отчество, пол, дату рождения, номера домашнего и мобильного телефонов, адрес электронной почты, город жительства (пребывания), сведения об истории покупок, в том числе наименование приобретаемого товара/услуги и их стоимость, а также данные об интересах на основании данных о поведении в сети Интернет, в сетях телекоммуникационных и интернет-операторов, сетевых и коалиционных программ лояльности. Также я разрешаю «НЛБ» в целях информирования о товарах, работах, услугах и проведения опросов осуществлять обработку вышеперечисленных персональных данных и направлять на указанный мною адрес электронной почты и/или на номер мобильного телефона, а также с помощью системы мгновенного обмена сообщениями через интернет рекламу и информацию о товарах, работах, услугах «НЛБ» и его партнёров. Согласие может быть отозвано мною в любой момент путем направления письменного уведомления по адресу «НЛБ».
 				+e.FORM.__submit.formValidate
-					INPUT(type="hidden" name="project_name" value="FLY COFFEE")
-					INPUT(type="hidden" name="admin_email" value="info@ligabar.ru")
-					INPUT(type="hidden" name="form_subject" value="Popup request")
+					H2.heading-h2
+						| Request Quote
 					+e.items-input
-						+e.LABEL().label Ваше имя *
-						+e.INPUT(name="name_input").input
+						+e.LABEL().label Name
+						+e.INPUT(name="text", placeholder="First and Last Name").input
 					+e.items-input
-						+e.LABEL().label Ваш телефон *
-						+e.INPUT(name="phone_input").input.phones-mask
+						+e.LABEL().label E-Mail*
+						+e.INPUT(name="text", placeholder="E-mail").input
 					+e.items-input
-						+e.LABEL().label Ваш E-Mail
-						+e.INPUT(name="email_input" data-required="Email required").input
+						+e.LABEL().label Company name*
+						+e.INPUT(name="text", placeholder="Company name").input
 					+e.items-input
-						LABEL().label-checked
-							INPUT(type="checkbox" name="check_input" checked data-required="Checkbox required").input-checked
-							P.checkbox__text обработка персональных данных
-						P.posonal-info Читать соглашение *
+						+e.LABEL().label message
+						+e.TEXTAREA(name="text", placeholder="How SwiftMotion can help you?").input
 					+e.items-button
-						+e.BUTTON._button.button--submit.--cta(type="submit") Отправить
-
-			+b.main-form.zoom-anim-dialog#popup-send-skype
-				.porsone-information
-					span.closed--porsone-information
-						| ×
-					.porsone-scroll
-						P
-							| Настоящим подтверждаю, что я ознакомлен и согласен с условиями Политики в отношении обработки персональных данных. Настоящим я даю разрешение ООО «НАЦИОНАЛЬНАЯ ЛИГА БАРМЕНОВ» (далее – «НЛБ») в целях информирования о товарах и услугах «НЛБ», заключения и исполнения договора купли-продажи обрабатывать — собирать, записывать, систематизировать, накапливать, хранить, уточнять (обновлять, изменять), извлекать, использовать, передавать (в том числе поручать обработку другим лицам), обезличивать, блокировать, удалять, уничтожать — мои персональные данные: фамилию, имя, отчество, пол, дату рождения, номера домашнего и мобильного телефонов, адрес электронной почты, город жительства (пребывания), сведения об истории покупок, в том числе наименование приобретаемого товара/услуги и их стоимость, а также данные об интересах на основании данных о поведении в сети Интернет, в сетях телекоммуникационных и интернет-операторов, сетевых и коалиционных программ лояльности. Также я разрешаю «НЛБ» в целях информирования о товарах, работах, услугах и проведения опросов осуществлять обработку вышеперечисленных персональных данных и направлять на указанный мною адрес электронной почты и/или на номер мобильного телефона, а также с помощью системы мгновенного обмена сообщениями через интернет рекламу и информацию о товарах, работах, услугах «НЛБ» и его партнёров. Согласие может быть отозвано мною в любой момент путем направления письменного уведомления по адресу «НЛБ».
-				+e.FORM.__submit.formValidate
-						INPUT(type="hidden" name="project_name" value="FLY COFFEE")
-						INPUT(type="hidden" name="admin_email" value="info@ligabar.ru")
-						INPUT(type="hidden" name="form_subject" value="Popup request")
-						+e.items-input
-							+e.LABEL().label Ваш Skype *
-							+e.INPUT(name="skype_input").input
-						+e.items-input.wraps-date
-							.items-input--date
-								+e.LABEL().label Время консультации *
-								+e.INPUT(name="date_input" type="date-bumber" placeholder="__.__.____").input.datapicker
-							.items-input--time
-								.custom-select
-									SELECT(name="select_input")
-										//- OPTION(value="0") Выберите время
-										OPTION(value="11:00") 11:00
-										OPTION(value="11:30") 11:30
-										OPTION(value="12:00") 12:00
-										OPTION(value="12:30") 12:30
-										OPTION(value="13:00") 13:00
-										OPTION(value="13:30") 13:30
-										OPTION(value="14:00") 14:00
-										OPTION(value="14:30") 14:30
-										OPTION(value="15:00") 15:00
-										OPTION(value="15:30") 15:30
-										OPTION(value="16:00") 16:00
-										OPTION(value="16:30") 16:30
-										OPTION(value="17:00") 17:00
-										OPTION(value="17:30") 17:30
-										OPTION(value="18:00") 18:00
-										OPTION(value="18:30") 18:30
-										OPTION(value="19:00") 19:00
-										OPTION(value="19:30") 19:30
-										OPTION(value="20:00") 20:00
-										OPTION(value="20:30") 20:30
-										OPTION(value="21:00") 21:00
-						+e.items-input
-							+e.LABEL().label Ваш телефон *
-							+e.INPUT(name="phone_input").input.phones-mask
-						+e.items-input
-							+e.LABEL().label Ваш E-Mail
-							+e.INPUT(name="email_input" data-required="Email required").input
-						+e.items-input
-							LABEL().label-checked
-								INPUT(type="checkbox" name="check_input" checked data-required="Checkbox required").input-checked
-								P.checkbox__text обработка персональных данных
-							P.posonal-info Читать соглашение *
-						+e.items-button
-							+e.BUTTON._button.button--submit.--cta(type="submit") Отправить
-
-			+b.main-form.popup-text.zoom-anim-dialog#popup-info
-				+e.__text
-					+e.P
-						| Настоящим подтверждаю, что я ознакомлен и согласен с условиями Политики в отношении обработки персональных данных. Настоящим я даю разрешение ООО «НАЦИОНАЛЬНАЯ ЛИГА БАРМЕНОВ» (далее – «НЛБ») в целях информирования о товарах и услугах «НЛБ», заключения и исполнения договора купли-продажи обрабатывать — собирать, записывать, систематизировать, накапливать, хранить, уточнять (обновлять, изменять), извлекать, использовать, передавать (в том числе поручать обработку другим лицам), обезличивать, блокировать, удалять, уничтожать — мои персональные данные: фамилию, имя, отчество, пол, дату рождения, номера домашнего и мобильного телефонов, адрес электронной почты, город жительства (пребывания), сведения об истории покупок, в том числе наименование приобретаемого товара/услуги и их стоимость, а также данные об интересах на основании данных о поведении в сети Интернет, в сетях телекоммуникационных и интернет-операторов, сетевых и коалиционных программ лояльности. Также я разрешаю «НЛБ» в целях информирования о товарах, работах, услугах и проведения опросов осуществлять обработку вышеперечисленных персональных данных и направлять на указанный мною адрес электронной почты и/или на номер мобильного телефона, а также с помощью системы мгновенного обмена сообщениями через интернет рекламу и информацию о товарах, работах, услугах «НЛБ» и его партнёров. Согласие может быть отозвано мною в любой момент путем направления письменного уведомления по адресу «НЛБ».
-		// Modals Form end
+						button.button(type="submit") Request Quote
 
 		block scripts
 			script(src='https://unpkg.com/flipping@latest/dist/flipping.web.js')
