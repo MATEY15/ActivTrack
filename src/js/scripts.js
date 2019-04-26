@@ -1,5 +1,6 @@
 //= jquery.min.js
 //= jquery.magnific-popup.min.js
+//= PageScroll2id.min.js
 
 window.onload = function(){
   // $("body").toggleClass('opacity');
@@ -13,7 +14,15 @@ window.onload = function(){
 $(".burger-menu").on("click", function() {  
   $(".menu-header").toggleClass('is-active');
   $("body").toggleClass('overflow');
-})
+});
+
+$('.scroll-section').on("click", function() {
+  if($('.menu-header').has('.is-active')) {
+    $('.menu-header').removeClass('is-active');
+  }
+});
+
+$(".scroll-section").mPageScroll2id();
 
 /* Popup Window */
 

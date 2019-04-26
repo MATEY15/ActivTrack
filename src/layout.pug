@@ -53,6 +53,22 @@ html(lang="en")
 					+e.items-button
 						button.button(type="submit") Request Quote
 
+			+b.main-form.zoom-anim-dialog#popup-contact
+				+e.FORM.__submit.formValidate
+					H2.heading-h2
+						| Contact us
+					+e.items-input
+						+e.LABEL().label E-Mail*
+						+e.INPUT(name="text", placeholder="E-mail").input
+					+e.items-input
+						+e.LABEL().label Phone*
+						+e.INPUT(name="text", placeholder="Phone").input
+					+e.items-input
+						+e.LABEL().label message
+						+e.TEXTAREA(name="text", placeholder="How SwiftMotion can help you?").input
+					+e.items-button
+						button.button(type="submit") Send
+
 		block scripts
 			script(src='https://unpkg.com/flipping@latest/dist/flipping.web.js')
 			script(src='/js/shape-overlays.js')
