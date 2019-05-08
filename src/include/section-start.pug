@@ -1,8 +1,12 @@
 +b.SECTION._start-using
 	.container
 		+b.start-using_
-			h4
-				| Start using ActivTrack
+			if(selected == "index")
+				h4
+					| Start using ActivTrack
+			else
+				h4
+					| Start using SpineTrack
 			p
 				| In the tumultuous business of cutting-in and attending 
 				br
